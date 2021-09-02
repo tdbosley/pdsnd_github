@@ -332,5 +332,7 @@ def main():
             break
 
 
+# if __name__ == "__main__": is a method for running a module of code if and only if the module is the main module.
+# Structuring executable code like this ensures that you can reference/import a module without any of the functions running unintentionally unless they are explicitly called.
 if __name__ == "__main__":
     main()
