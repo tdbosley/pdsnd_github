@@ -19,7 +19,8 @@ def get_filters():
     print('Hello! Let\'s explore some US bikeshare data!')
 
     # Create a list of valid month and day of the week inputs, this can be used to check the user input
-    months = ['January', 'February', 'March', 'April', 'May', 'June', 'All']
+    months = ['January', 'February', 'March', 'April', 'May', 'June',
+              'July', 'August', 'September', 'October', 'November', 'December' 'All']
     days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday',
             'Friday', 'Saturday', 'Sunday', 'All']
 
