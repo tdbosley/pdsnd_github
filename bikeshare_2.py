@@ -120,11 +120,11 @@ def load_data(city, month, day):
     # Create a start and end station concatenate column to help answer the station descriptive statistice questions
     df['Trip Stations'] = df['Start Station'] + '_' + df['End Station']
 
-    if month.title() != 'All':
+    if month != 'All':
 
         df = df[df['Start Month'] == month]
 
-    if day.title() != 'All':
+    if day != 'All':
 
         df = df[df['Start Day'] == day]
 
@@ -202,9 +202,9 @@ def trip_duration_stats(df, city, month, day):
     print('\nCalculating Trip Duration...\n')
     start_time = time.time()
 
-    if month.title() != 'All':
+    if month != 'All':
 
-        if day.title() != 'All':
+        if day != 'All':
             # Both month and day filters were selected so include reference to the mnonth and the day in the output statement
             print('The total travel time in {} was: {} hours or {} minutes or {} seconds on {}s in {}'.format(city, df['Trip Duration Hours'].sum(
             ).round(2), df['Trip Duration Minutes'].sum().round(2), df['Trip Duration'].sum().round(2), day, month), '\n')
@@ -222,7 +222,7 @@ def trip_duration_stats(df, city, month, day):
 
     else:
 
-        if day.title() != 'All':
+        if day != 'All':
             # Only day filters were selected so include reference to the day in the output statement
             print('The total travel time in {} was: {} hours or {} minutes or {} second on {}s'.format(city, df['Trip Duration Hours'].sum(
             ).round(2), df['Trip Duration Minutes'].sum().round(2), df['Trip Duration'].sum().round(2), day), '\n')
